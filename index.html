@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>БлескПро — Защита кузова автомобиля полиуретановой пленкой и керамикой в СПб</title>
+  <meta name="description" content="Оклейка авто антигравийной полиуретановой пленкой SunTek / Llumar (200 мкм) и керамикой Krytex 9H+ в Санкт-Петербурге за 1 день без пореза лака. Гарантия 5 лет." />
+
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              dark: '#111827',
+              card: '#1E293B',
+              light: '#F1F5F9',
+              orange: '#FF6B00',
+              orangeHover: '#E05E00',
+              amber: '#F59E0B',
+              textDark: '#1E2229',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1E2229;
+      background-color: #F1F5F9;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .car-zone {
+      transition: fill 0.35s ease, stroke 0.35s ease, opacity 0.35s ease;
+    }
+    .car-zone-active {
+      fill: rgba(255, 107, 0, 0.38);
+      stroke: #FF6B00;
+      stroke-width: 2.2;
+    }
+    .car-zone-ceramic {
+      fill: rgba(56, 189, 248, 0.22);
+      stroke: #38BDF8;
+      stroke-width: 1.5;
+    }
+    .car-zone-inactive {
+      fill: rgba(148, 163, 184, 0.14);
+      stroke: #64748B;
+      stroke-width: 1.2;
+    }
+    /* Custom subtle grid background for dark sections */
+    .bg-tech-grid {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-brand-orange selection:text-white">
+
+  <!-- ==================== STICKY HEADER ==================== -->
+  <header class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Vector Logo -->
+        <a href="#top" class="flex items-center gap-3 group focus:outline-none">
+          <div class="w-11 h-11 rounded-xl bg-brand-orange flex items-center justify-center shadow-lg shadow-brand-orange/25 group-hover:scale-105 transition-transform">
+            <!-- Custom SVG Car + Shield Logo -->
+            <svg class="w-7 h-7 text-white" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 3L6 8V17C6 25.1 11.1 32.5 18 35C24.9 32.5 30 25.1 30 17V8L18 3Z" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/>
+              <path d="M10.5 20.5L13 14.5C13.4 13.6 14.3 13 15.3 13H20.7C21.7 13 22.6 13.6 23 14.5L25.5 20.5M10.5 20.5H25.5M10.5 20.5V23.5H12.5V22H23.5V23.5H25.5V20.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="13.5" cy="18.5" r="1" fill="currentColor"/>
+              <circle cx="22.5" cy="18.5" r="1" fill="currentColor"/>
+            </svg>
+          </div>
+          <div>
+            <span class="font-heading font-extrabold text-white text-xl tracking-wide block leading-none">БЛЕСК<span class="text-brand-orange">ПРО</span></span>
+            <span class="text-[11px] text-slate-400 font-medium tracking-wider uppercase mt-1 block">Детейлинг-студия • СПб</span>
+          </div>
+        </a>
+
+        <!-- Desktop Anchor Navigation -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
+          <a href="#calculator" class="hover:text-brand-orange transition-colors">Калькулятор</a>
+          <a href="#tariffs" class="hover:text-brand-orange transition-colors">Тарифы</a>
+          <a href="#standards" class="hover:text-brand-orange transition-colors">Гарантии</a>
+          <a href="#stages" class="hover:text-brand-orange transition-colors">Этапы работ</a>
+          <a href="#portfolio" class="hover:text-brand-orange transition-colors">Портфолио</a>
+          <a href="#faq" class="hover:text-brand-orange transition-colors">Вопросы</a>
+          <a href="#contacts" class="hover:text-brand-orange transition-colors">Контакты</a>
+        </nav>
+
+        <!-- Phone & Quick Action -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="https://t.me/bleskpro_spb" target="_blank" rel="noopener noreferrer" aria-label="Написать в Telegram"
+             class="p-2.5 rounded-xl bg-brand-card border border-slate-700 text-slate-200 hover:border-sky-400 hover:text-sky-400 transition-colors">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+            </svg>
+          </a>
+          <a href="tel:+78124093872"
+             class="px-4 py-2.5 rounded-xl border border-brand-orange/80 bg-brand-card/80 text-white font-heading font-bold text-sm hover:bg-brand-orange transition-colors">
+            +7 (812) 409-38-72
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" type="button" aria-label="Открыть меню"
+                class="lg:hidden p-2.5 rounded-xl bg-brand-card border border-slate-700 text-slate-200 hover:text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-brand-card border-b border-slate-700 px-4 pt-3 pb-5 space-y-2">
+      <a href="#calculator" class="block py-2 px-3 rounded-lg text-slate-200 hover:bg-slate-800 font-medium mobile-link">Калькулятор стоимости</a>
+      <a href="#tariffs" class="block py-2 px-3 rounded-lg text-slate-200 hover:bg-slate-800 font-medium mobile-link">Тарифы и пакеты</a>
+      <a href="#standards" class="block py-2 px-3 rounded-lg text-slate-200 hover:bg-slate-800 font-medium mobile-link">Стандарты и гарантии</a>
+      <a href="#stages" class="block py-2 px-3 rounded-lg text-slate-200 hover:bg-slate-800 font-medium mobile-link">6 этапов работы</a>
+      <a href="#portfolio" class="block py-2 px-3 rounded-lg text-slate-200 hover:bg-slate-800 font-medium mobile-link">Портфолио «До / После»</a>
+      <a href="#faq" class="block py-2 px-3 rounded-lg text-slate-200 hover:bg-slate-800 font-medium mobile-link">Ответы на вопросы</a>
+      <a href="#contacts" class="block py-2 px-3 rounded-lg text-slate-200 hover:bg-slate-800 font-medium mobile-link">Контакты и адрес</a>
+      <div class="pt-3 border-t border-slate-700 flex flex-col gap-2">
+        <a href="tel:+78124093872" class="w-full py-3 rounded-xl bg-brand-orange text-white font-heading font-bold text-center text-sm">
+          Позвонить: +7 (812) 409-38-72
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== SECTION 1: HERO (DARK #111827) ==================== -->
+  <section id="top" class="relative bg-brand-dark bg-tech-grid text-white pt-10 pb-16 lg:pt-16 lg:pb-24 overflow-hidden">
+    <!-- Subtle Ambient Orange Glow -->
+    <div class="pointer-events-none absolute -top-24 right-1/4 w-96 h-96 rounded-full bg-brand-orange/10 blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+        <!-- Left Column: Offer, Bullets, CTA -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/15 border border-brand-orange/40 text-brand-amber text-xs sm:text-sm font-heading font-bold tracking-wide uppercase">
+            <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+            Официальная гарантия по договору — 5 лет
+          </div>
+
+          <h1 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[42px] leading-[1.15] tracking-tight text-white">
+            Защита кузова автомобиля полиуретановой пленкой и керамикой <span class="text-brand-orange">в СПб за 1 день</span>
+          </h1>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+            Оригинальная антигравийная пленка <strong class="text-white font-semibold">SunTek / Llumar (200 мкм)</strong> с подворотом краев и без пореза родного лака. Фиксируем итоговую стоимость в заказ-наряде до начала работ.
+          </p>
+
+          <!-- 3 Key Metrics Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-2">
+            <div class="bg-brand-card/90 border border-slate-700/80 rounded-2xl p-4">
+              <div class="font-heading font-extrabold text-xl text-white">1 850+ авто</div>
+              <div class="text-xs text-slate-400 mt-1">защищено в СПб с 2019 года</div>
+            </div>
+            <div class="bg-brand-card/90 border border-slate-700/80 rounded-2xl p-4">
+              <div class="font-heading font-extrabold text-xl text-white">Без пореза ЛКП</div>
+              <div class="text-xs text-slate-400 mt-1">точные лекала и безопасный рез</div>
+            </div>
+            <div class="bg-brand-card/90 border border-brand-amber/40 rounded-2xl p-4">
+              <div class="font-heading font-extrabold text-xl text-brand-amber">Бонус 5 500 ₽</div>
+              <div class="text-xs text-slate-300 mt-1">«Антидождь» на стекла в подарок</div>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-3.5 pt-2">
+            <button type="button" onclick="openBookingModal('Расчет стоимости с бонусом «Антидождь»')"
+                    class="px-7 py-4 rounded-2xl bg-brand-orange hover:bg-brand-orangeHover text-white font-heading font-bold text-base shadow-xl shadow-brand-orange/25 transition-all flex items-center justify-center gap-2.5 cursor-pointer">
+              <span>Рассчитать стоимость</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+            <a href="https://t.me/bleskpro_spb" target="_blank" rel="noopener noreferrer"
+               class="px-7 py-4 rounded-2xl bg-brand-card hover:bg-slate-800 border border-slate-700 text-white font-heading font-semibold text-base transition-all flex items-center justify-center gap-2.5">
+              <svg class="w-5 h-5 text-sky-400" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+              </svg>
+              <span>Написать в Telegram</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Protection Schematic & Rating Card -->
+        <div class="lg:col-span-5">
+          <div class="bg-brand-card border border-slate-700/90 rounded-3xl p-6 shadow-2xl space-y-5">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-heading font-bold uppercase tracking-wider text-brand-orange">Схема защиты «Зона риска»</span>
+              <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-lg border border-slate-700">SunTek PPF 200 мкм</span>
+            </div>
+
+            <!-- Interactive Hero Car Top-View Schematic -->
+            <div class="bg-brand-dark/90 rounded-2xl p-4 border border-slate-800 flex flex-col items-center">
+              <svg class="w-full max-w-[330px] h-auto" viewBox="0 0 360 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Left = Front of Car -->
+                <!-- Front Bumper (Active Orange) -->
+                <path d="M36 45 C22 55, 22 120, 36 130 L56 125 L56 50 Z" fill="rgba(255,107,0,0.42)" stroke="#FF6B00" stroke-width="2"/>
+                <!-- Headlights (Active Orange) -->
+                <path d="M40 48 L62 44 L65 56 L43 58 Z" fill="#FF6B00" stroke="#F59E0B" stroke-width="1.2"/>
+                <path d="M40 127 L62 131 L65 119 L43 117 Z" fill="#FF6B00" stroke="#F59E0B" stroke-width="1.2"/>
+                <!-- Hood (Active Orange) -->
+                <path d="M58 50 L125 46 L125 129 L58 125 Z" fill="rgba(255,107,0,0.38)" stroke="#FF6B00" stroke-width="2"/>
+                <!-- Side Mirrors (Active Orange) -->
+                <rect x="132" y="28" width="16" height="10" rx="4" fill="#FF6B00"/>
+                <rect x="132" y="137" width="16" height="10" rx="4" fill="#FF6B00"/>
+                <!-- Front Fenders -->
+                <path d="M62 42 L134 39 L134 46 L62 49 Z" fill="rgba(255,107,0,0.28)" stroke="#FF6B00" stroke-width="1.5"/>
+                <path d="M62 133 L134 136 L134 129 L62 126 Z" fill="rgba(255,107,0,0.28)" stroke="#FF6B00" stroke-width="1.5"/>
+                <!-- Windshield -->
+                <path d="M128 48 L165 53 L165 122 L128 127 Z" fill="rgba(56,189,248,0.18)" stroke="#38BDF8" stroke-width="1.4"/>
+                <!-- Roof & Rear Body (Ceramic Shield) -->
+                <rect x="168" y="53" width="95" height="69" rx="6" fill="rgba(56,189,248,0.14)" stroke="#38BDF8" stroke-width="1.5"/>
+                <!-- Side Doors (Ceramic Shield) -->
+                <path d="M136 39 L275 41 L275 51 L136 47 Z" fill="rgba(56,189,248,0.14)" stroke="#38BDF8" stroke-width="1.2"/>
+                <path d="M136 136 L275 134 L275 124 L136 128 Z" fill="rgba(56,189,248,0.14)" stroke="#38BDF8" stroke-width="1.2"/>
+                <!-- Door Handle Cups (Orange Dots) -->
+                <rect x="176" y="42" width="14" height="4" rx="2" fill="#FF6B00"/>
+                <rect x="226" y="42" width="14" height="4" rx="2" fill="#FF6B00"/>
+                <rect x="176" y="129" width="14" height="4" rx="2" fill="#FF6B00"/>
+                <rect x="226" y="129" width="14" height="4" rx="2" fill="#FF6B00"/>
+                <!-- Rear Windshield & Trunk -->
+                <path d="M266 54 L296 58 L296 117 L266 121 Z" fill="rgba(56,189,248,0.18)" stroke="#38BDF8" stroke-width="1.4"/>
+                <path d="M298 54 L328 58 C338 68, 338 107, 328 117 L298 121 Z" fill="rgba(56,189,248,0.14)" stroke="#38BDF8" stroke-width="1.4"/>
+              </svg>
+              <div class="flex flex-wrap items-center justify-center gap-4 text-xs mt-2">
+                <span class="flex items-center gap-1.5 text-slate-200">
+                  <span class="w-3 h-3 rounded-sm bg-brand-orange inline-block"></span> Полиуретан 200 мкм
+                </span>
+                <span class="flex items-center gap-1.5 text-slate-300">
+                  <span class="w-3 h-3 rounded-sm bg-sky-400/50 border border-sky-400 inline-block"></span> Керамика Krytex 9H+
+                </span>
+              </div>
+            </div>
+
+            <!-- Live Yandex Maps / 2GIS Rating Box -->
+            <div class="bg-brand-dark/70 border border-slate-800 rounded-2xl p-4 flex items-center justify-between gap-3">
+              <div>
+                <div class="flex items-center gap-1.5 text-brand-amber font-heading font-bold text-base">
+                  <span>★★★★★</span>
+                  <span class="text-white">4,9 / 5,0</span>
+                </div>
+                <p class="text-xs text-slate-400 mt-0.5">Рейтинг на Яндекс Картах и 2ГИС (310+ отзывов)</p>
+              </div>
+              <span class="px-3 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-semibold whitespace-nowrap">
+                Бокс 240 м²
+              </span>
+            </div>
+
+            <!-- Location & Hours -->
+            <div class="text-xs text-slate-400 space-y-1.5 pt-1 border-t border-slate-800">
+              <div class="flex items-center gap-2 text-slate-200 font-medium">
+                <svg class="w-4 h-4 text-brand-orange shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>Приморский р-н, ул. Савушкина, д. 119, корп. 3, бокс № 4</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Ежедневно с 10:00 до 21:00 • Охраняемый теплый бокс</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 2: INTERACTIVE CALCULATOR & VISUALIZER ==================== -->
+  <section id="calculator" class="py-16 lg:py-24 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-10">
+        <span class="text-brand-orange font-heading font-bold text-xs uppercase tracking-wider">Онлайн-подбор защиты</span>
+        <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-brand-textDark mt-2">
+          Рассчитайте стоимость оклейки под класс вашего авто
+        </h2>
+        <p class="text-slate-600 mt-3 text-base">
+          Выберите тип кузова и желаемый уровень бронирования — на схеме ниже автоматически подсветятся защищаемые элементы и рассчитается ориентировочная смета.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-xl border border-slate-200/80 p-6 sm:p-8 lg:p-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+
+          <!-- Controls (Left 7 cols) -->
+          <div class="lg:col-span-7 space-y-7">
+            <!-- Step 1: Car Class -->
+            <div>
+              <label class="block font-heading font-bold text-sm text-brand-textDark uppercase tracking-wide mb-3">
+                1. Выберите класс автомобиля
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="carClassGroup">
+                <button type="button" data-class="sedan" data-mult="1"
+                        class="calc-class-btn active p-3.5 rounded-2xl border-2 border-brand-orange bg-brand-orange/5 text-left transition-all cursor-pointer">
+                  <div class="font-heading font-bold text-sm text-brand-textDark">Седан / Хэтчбек</div>
+                  <div class="text-xs text-slate-500 mt-0.5">BMW 3/5, Camry, Octavia</div>
+                </button>
+                <button type="button" data-class="crossover" data-mult="1.12"
+                        class="calc-class-btn p-3.5 rounded-2xl border-2 border-slate-200 hover:border-slate-300 bg-white text-left transition-all cursor-pointer">
+                  <div class="font-heading font-bold text-sm text-brand-textDark">Кроссовер</div>
+                  <div class="text-xs text-slate-500 mt-0.5">Geely Monjaro, BMW X3/X5</div>
+                </button>
+                <button type="button" data-class="suv" data-mult="1.25"
+                        class="calc-class-btn p-3.5 rounded-2xl border-2 border-slate-200 hover:border-slate-300 bg-white text-left transition-all cursor-pointer">
+                  <div class="font-heading font-bold text-sm text-brand-textDark">Внедорожник / Минивэн</div>
+                  <div class="text-xs text-slate-500 mt-0.5">Li Auto L9, Tank 500, Zeekr 009</div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Protection Package -->
+            <div>
+              <label class="block font-heading font-bold text-sm text-brand-textDark uppercase tracking-wide mb-3">
+                2. Выберите пакет защиты пленкой (SunTek / Llumar 200 мкм)
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="packageGroup">
+                <button type="button" data-pkg="standard" data-base="49000" data-days="1 день"
+                        class="calc-pkg-btn active p-4 rounded-2xl border-2 border-brand-orange bg-brand-orange/5 text-left transition-all cursor-pointer">
+                  <div class="flex items-center justify-between">
+                    <span class="font-heading font-bold text-sm text-brand-textDark">Стандарт</span>
+                    <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-brand-orange text-white">Хит</span>
+                  </div>
+                  <div class="text-xs text-slate-600 mt-1">Зоны риска + керамика кузова</div>
+                </button>
+                <button type="button" data-pkg="optimum" data-base="75000" data-days="1,5 дня"
+                        class="calc-pkg-btn p-4 rounded-2xl border-2 border-slate-200 hover:border-slate-300 bg-white text-left transition-all cursor-pointer">
+                  <div class="font-heading font-bold text-sm text-brand-textDark">Оптимум</div>
+                  <div class="text-xs text-slate-600 mt-1">Весь передний блок + 2 слоя керамики</div>
+                </button>
+                <button type="button" data-pkg="maximum" data-base="165000" data-days="3 дня"
+                        class="calc-pkg-btn p-4 rounded-2xl border-2 border-slate-200 hover:border-slate-300 bg-white text-left transition-all cursor-pointer">
+                  <div class="font-heading font-bold text-sm text-brand-textDark">Максимум 360°</div>
+                  <div class="text-xs text-slate-600 mt-1">Полная оклейка всего кузова</div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Additional Options -->
+            <div>
+              <label class="block font-heading font-bold text-sm text-brand-textDark uppercase tracking-wide mb-3">
+                3. Дополнительные опции
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <label class="flex items-center gap-3 p-3.5 rounded-2xl border border-slate-200 hover:bg-slate-50 cursor-pointer select-none">
+                  <input type="checkbox" id="optPolish" value="12000" class="w-5 h-5 accent-brand-orange rounded" />
+                  <div>
+                    <div class="text-sm font-semibold text-brand-textDark">Восстановительная полировка</div>
+                    <div class="text-xs text-slate-500">Для авто с пробегом (+12 000 ₽)</div>
+                  </div>
+                </label>
+                <label class="flex items-center gap-3 p-3.5 rounded-2xl border border-slate-200 hover:bg-slate-50 cursor-pointer select-none">
+                  <input type="checkbox" id="optInterior" value="8500" class="w-5 h-5 accent-brand-orange rounded" />
+                  <div>
+                    <div class="text-sm font-semibold text-brand-textDark">Броня экранов и глянца в салоне</div>
+                    <div class="text-xs text-slate-500">Защита мультимедиа и консоли (+8 500 ₽)</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Visualizer & Summary Card (Right 5 cols) -->
+          <div class="lg:col-span-5 bg-brand-dark text-white rounded-3xl p-6 sm:p-7 space-y-5">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-heading font-bold uppercase tracking-wider text-slate-400">Зоны оклейки на схеме</span>
+              <span id="calcPkgLabel" class="text-xs font-bold px-2.5 py-1 rounded-lg bg-brand-orange/20 text-brand-orange">Тариф «Стандарт»</span>
+            </div>
+
+            <!-- Dynamic Car Top-Down SVG -->
+            <div class="bg-brand-card rounded-2xl p-4 border border-slate-700/80 flex flex-col items-center">
+              <svg class="w-full max-w-[320px] h-auto" viewBox="0 0 360 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Front Bumper -->
+                <path id="zoneBumperFront" class="car-zone car-zone-active" d="M36 45 C22 55, 22 120, 36 130 L56 125 L56 50 Z" />
+                <!-- Headlights -->
+                <path id="zoneLights" class="car-zone car-zone-active" d="M40 48 L62 44 L65 56 L43 58 Z M40 127 L62 131 L65 119 L43 117 Z" />
+                <!-- Hood -->
+                <path id="zoneHood" class="car-zone car-zone-active" d="M58 50 L125 46 L125 129 L58 125 Z" />
+                <!-- Front Fenders -->
+                <path id="zoneFendersFront" class="car-zone car-zone-ceramic" d="M62 42 L134 39 L134 46 L62 49 Z M62 133 L134 136 L134 129 L62 126 Z" />
+                <!-- Mirrors -->
+                <path id="zoneMirrors" class="car-zone car-zone-active" d="M132 28 H148 V38 H132 Z M132 137 H148 V147 H132 Z" />
+                <!-- Roof Strip -->
+                <rect id="zoneRoofStrip" class="car-zone car-zone-active" x="167" y="53" width="12" height="69" rx="2" />
+                <!-- Main Roof -->
+                <rect id="zoneRoof" class="car-zone car-zone-ceramic" x="180" y="53" width="83" height="69" rx="4" />
+                <!-- Side Doors & Rear Fenders -->
+                <path id="zoneDoors" class="car-zone car-zone-ceramic" d="M136 39 L295 43 L295 52 L136 47 Z M136 136 L295 132 L295 123 L136 128 Z" />
+                <!-- Rear Trunk & Bumper -->
+                <path id="zoneRear" class="car-zone car-zone-ceramic" d="M298 54 L328 58 C338 68, 338 107, 328 117 L298 121 Z" />
+                <!-- Windshield & Rear Glass (Neutral) -->
+                <path d="M128 48 L165 53 L165 122 L128 127 Z" fill="rgba(15,23,42,0.75)" stroke="#475569" stroke-width="1.2" />
+                <path d="M266 54 L296 58 L296 117 L266 121 Z" fill="rgba(15,23,42,0.75)" stroke="#475569" stroke-width="1.2" />
+              </svg>
+              <p id="calcZonesText" class="text-xs text-slate-300 text-center mt-2 leading-relaxed">
+                Оклейка: передний бампер, капот, фары, зеркала, полоса на крышу, зоны под ручками + керамика Krytex 9H+ на весь кузов.
+              </p>
+            </div>
+
+            <!-- Calculated Price & Turnaround -->
+            <div class="flex items-end justify-between border-t border-slate-800 pt-4">
+              <div>
+                <div class="text-xs text-slate-400">Ориентировочная стоимость:</div>
+                <div id="calcPriceOutput" class="font-heading font-extrabold text-3xl text-brand-orange mt-0.5">49 000 ₽</div>
+              </div>
+              <div class="text-right">
+                <div class="text-xs text-slate-400">Срок работы:</div>
+                <div id="calcDaysOutput" class="font-heading font-bold text-base text-white mt-0.5">1 день</div>
+              </div>
+            </div>
+
+            <button type="button" onclick="submitCalculatedConfig()"
+                    class="w-full py-4 rounded-2xl bg-brand-orange hover:bg-brand-orangeHover text-white font-heading font-bold text-sm sm:text-base shadow-lg shadow-brand-orange/25 transition-all cursor-pointer">
+              Зафиксировать цену и получить бонус
+            </button>
+            <p class="text-[11px] text-slate-400 text-center">
+              При записи через сайт — «Антидождь» на все стекла (5 500 ₽) в подарок
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3: TRANSPARENT TARIFFS ==================== -->
+  <section id="tariffs" class="py-16 lg:py-24 bg-white border-t border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-brand-orange font-heading font-bold text-xs uppercase tracking-wider">Честная смета без скрытых доплат</span>
+        <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-brand-textDark mt-2">
+          Прозрачные тарифы «Броня + Блеск 360°»
+        </h2>
+        <p class="text-slate-600 mt-3 text-base">
+          Фиксируем итоговую стоимость и сроки в заказ-наряде до начала работ. Показываем оригинальные рулоны SunTek и Llumar перед стартом.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-7 items-stretch">
+
+        <!-- Tariff 1: Standard (Priority / Hit) -->
+        <div class="relative bg-white rounded-3xl border-2 border-brand-orange shadow-2xl shadow-brand-orange/10 p-7 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-3 py-1 rounded-full bg-brand-orange text-white font-heading font-bold text-xs uppercase tracking-wider">
+                Хит продаж
+              </span>
+              <span class="text-xs font-semibold text-slate-500">Срок: 1 день</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-2xl text-brand-textDark">Тариф «Стандарт»</h3>
+            <p class="text-sm text-slate-500 mt-1">Ударная зона риска + керамика кузова</p>
+            <div class="mt-5 pb-5 border-b border-slate-200">
+              <span class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-orange">от 49 000 ₽</span>
+            </div>
+
+            <ul class="mt-6 space-y-3 text-sm text-slate-700">
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-orange font-bold mt-0.5">✓</span>
+                <span>Передний бампер и капот (полиуретан SunTek 200 мкм)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-orange font-bold mt-0.5">✓</span>
+                <span>Передние фары, ПТФ и корпуса боковых зеркал</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-orange font-bold mt-0.5">✓</span>
+                <span>Зоны под ручками дверей и защитная полоса на крышу</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-orange font-bold mt-0.5">✓</span>
+                <span>Нанокерамика <strong>Krytex 9H+</strong> на весь остальной кузов</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-orange font-bold mt-0.5">✓</span>
+                <span>Двойная гарантия: 5 лет на пленку + 2 года на монтаж</span>
+              </li>
+            </ul>
+          </div>
+
+          <button type="button" onclick="openBookingModal('Тариф «Стандарт» (от 49 000 ₽)')"
+                  class="mt-8 w-full py-4 rounded-2xl bg-brand-orange hover:bg-brand-orangeHover text-white font-heading font-bold text-sm shadow-lg shadow-brand-orange/25 transition-all cursor-pointer">
+            Выбрать тариф «Стандарт»
+          </button>
+        </div>
+
+        <!-- Tariff 2: Optimum -->
+        <div class="bg-brand-light/60 rounded-3xl border border-slate-200 p-7 flex flex-col justify-between hover:border-slate-300 transition-colors">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-3 py-1 rounded-full bg-slate-200 text-slate-700 font-heading font-bold text-xs uppercase tracking-wider">
+                Оптимальный
+              </span>
+              <span class="text-xs font-semibold text-slate-500">Срок: 1,5 дня</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-2xl text-brand-textDark">Тариф «Оптимум»</h3>
+            <p class="text-sm text-slate-500 mt-1">Весь передний ударный блок целиком</p>
+            <div class="mt-5 pb-5 border-b border-slate-200">
+              <span class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-textDark">от 75 000 ₽</span>
+            </div>
+
+            <ul class="mt-6 space-y-3 text-sm text-slate-700">
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-orange font-bold mt-0.5">✓</span>
+                <span>Капот и передний бампер целиком с подворотом краев</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-orange font-bold mt-0.5">✓</span>
+                <span><strong>Два передних крыла полностью</strong> + стойки лобового стекла</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-orange font-bold mt-0.5">✓</span>
+                <span>Фары, зеркала, внутренние пороги и зона погрузки багажника</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-orange font-bold mt-0.5">✓</span>
+                <span><strong>2 слоя</strong> гидрофобной керамики Krytex 9H+ на остальной кузов</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-orange font-bold mt-0.5">✓</span>
+                <span>Бесплатная контрольная мойка и осмотр через 14 дней</span>
+              </li>
+            </ul>
+          </div>
+
+          <button type="button" onclick="openBookingModal('Тариф «Оптимум» (от 75 000 ₽)')"
+                  class="mt-8 w-full py-4 rounded-2xl bg-brand-dark hover:bg-slate-800 text-white font-heading font-bold text-sm transition-all cursor-pointer">
+            Выбрать тариф «Оптимум»
+          </button>
+        </div>
+
+        <!-- Tariff 3: Maximum 360 -->
+        <div class="bg-brand-light/60 rounded-3xl border border-slate-200 p-7 flex flex-col justify-between hover:border-slate-300 transition-colors">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-3 py-1 rounded-full bg-slate-200 text-slate-700 font-heading font-bold text-xs uppercase tracking-wider">
+                Максимум защиты
+              </span>
+              <span class="text-xs font-semibold text-slate-500">Срок: 2–3 дня</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-2xl text-brand-textDark">Тариф «Максимум 360°»</h3>
+            <p class="text-sm text-slate-500 mt-1">Полная оклейка всего кузова полиуретаном</p>
+            <div class="mt-5 pb-5 border-b border-slate-200">
+              <span class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-textDark">от 165 000 ₽</span>
+            </div>
+
+            <ul class="mt-6 space-y-3 text-sm text-slate-700">
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-orange font-bold mt-0.5">✓</span>
+                <span><strong>100% окрашенных элементов кузова</strong> в бронепленке (глянец или мат)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-orange font-bold mt-0.5">✓</span>
+                <span>Полный подворот краев без видимых стыков и ступенек</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-orange font-bold mt-0.5">✓</span>
+                <span>Глянцевые стойки дверей, головная оптика и задние фонари</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-orange font-bold mt-0.5">✓</span>
+                <span>Гидрофобный состав «Антидождь» на все стекла по кругу</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-orange font-bold mt-0.5">✓</span>
+                <span>Такси комфорт-класса до дома/офиса при сдаче авто в подарок</span>
+              </li>
+            </ul>
+          </div>
+
+          <button type="button" onclick="openBookingModal('Тариф «Максимум 360°» (от 165 000 ₽)')"
+                  class="mt-8 w-full py-4 rounded-2xl bg-brand-dark hover:bg-slate-800 text-white font-heading font-bold text-sm transition-all cursor-pointer">
+            Выбрать тариф «Максимум 360°»
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 4: STANDARDS, CERTIFICATES & DOUBLE WARRANTY ==================== -->
+  <section id="standards" class="py-16 lg:py-24 bg-brand-dark bg-tech-grid text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="text-brand-orange font-heading font-bold text-xs uppercase tracking-wider">Почему нам доверяют 1 850+ автовладельцев</span>
+        <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white mt-2">
+          Стандарты студии «БлескПро» и двойная гарантия
+        </h2>
+      </div>
+
+      <!-- 4 Core Advantages -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="bg-brand-card border border-slate-700/80 rounded-3xl p-6 space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-brand-orange/15 border border-brand-orange/30 flex items-center justify-center text-brand-orange font-heading font-extrabold text-lg">
+            01
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white">Оригинальные рулоны</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Показываем рулоны SunTek и Llumar с заводской маркировкой и голограммами перед началом работ — исключена подмена на дешевый гибрид.
+          </p>
+        </div>
+
+        <div class="bg-brand-card border border-slate-700/80 rounded-3xl p-6 space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-brand-orange/15 border border-brand-orange/30 flex items-center justify-center text-brand-orange font-heading font-extrabold text-lg">
+            02
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white">Цена в заказ-наряде</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Фиксируем итоговую смету и точный час выдачи автомобиля в договоре до приемки. Стоимость не вырастет в процессе.
+          </p>
+        </div>
+
+        <div class="bg-brand-card border border-slate-700/80 rounded-3xl p-6 space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-brand-orange/15 border border-brand-orange/30 flex items-center justify-center text-brand-orange font-heading font-extrabold text-lg">
+            03
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white">Фотоотчет в Telegram</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Ежедневно присылаем фото- и видеоотчеты каждого этапа в мессенджер: вы видите подготовку кузова, подвороты и сушку.
+          </p>
+        </div>
+
+        <div class="bg-brand-card border border-slate-700/80 rounded-3xl p-6 space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-brand-orange/15 border border-brand-orange/30 flex items-center justify-center text-brand-orange font-heading font-extrabold text-lg">
+            04
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white">Стерильный бокс 240 м²</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Охраняемый теплый бокс с приточно-вытяжной вентиляцией, климат-контролем +22°C, бестеневым светом и видеонаблюдением 24/7.
+          </p>
+        </div>
+      </div>
+
+      <!-- Double Warranty + Interactive Certificates -->
+      <div class="bg-brand-card border border-slate-700 rounded-3xl p-6 sm:p-8 lg:p-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-4">
+            <span class="inline-block px-3 py-1 rounded-full bg-brand-amber/20 text-brand-amber font-heading font-bold text-xs uppercase">
+              Юридическая защита клиента
+            </span>
+            <h3 class="font-heading font-extrabold text-2xl sm:text-3xl text-white">
+              Двойная гарантия закреплена в договоре
+            </h3>
+            <div class="space-y-3 pt-2">
+              <div class="p-4 rounded-2xl bg-brand-dark/80 border border-slate-800">
+                <div class="font-heading font-bold text-brand-orange text-base">5 лет официальной гарантии производителя</div>
+                <p class="text-xs sm:text-sm text-slate-300 mt-1">Пленка не пожелтеет, не помутнеет, не расслоится и не растрескается под воздействием ультрафиолета и реагентов СПб.</p>
+              </div>
+              <div class="p-4 rounded-2xl bg-brand-dark/80 border border-slate-800">
+                <div class="font-heading font-bold text-brand-amber text-base">2 года гарантии студии «БлескПро» на монтаж</div>
+                <p class="text-xs sm:text-sm text-slate-300 mt-1">Гарантируем отсутствие отклеивания краев и пузырей. При необходимости выполним бесплатную коррекцию за 1 день.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Certificates Grid -->
+          <div class="lg:col-span-6">
+            <div class="text-xs font-heading font-bold uppercase tracking-wider text-slate-400 mb-3">
+              Нажмите на сертификат для просмотра документа:
+            </div>
+            <div class="grid grid-cols-2 gap-3.5">
+              <button type="button" onclick="openCertModal('Авторизованный установочный центр SunTek PPF', 'Сертификат № ST-78-2025. Подтверждает право студии «БлескПро» (ИП Смирнов А.В.) на профессиональный монтаж антигравийных пленок SunTek серии Ultra и Reaction с сохранением заводской гарантии 5 лет.')"
+                      class="p-4 rounded-2xl bg-brand-dark hover:bg-slate-900 border border-slate-700 hover:border-brand-orange text-left transition-all cursor-pointer group">
+                <div class="text-xs text-brand-orange font-bold uppercase">Сертификат</div>
+                <div class="font-heading font-bold text-sm text-white mt-1 group-hover:text-brand-orange transition-colors">SunTek PPF Center</div>
+                <div class="text-[11px] text-slate-400 mt-2">Открыть документ →</div>
+              </button>
+
+              <button type="button" onclick="openCertModal('Официальный партнер Llumar Paint Protection', 'Сертификат № LL-SPB-419. Подтверждает квалификацию 6 штатных мастеров студии и использование оригинального полиуретана Llumar Valor / Platinum толщиной 200 микрон.')"
+                      class="p-4 rounded-2xl bg-brand-dark hover:bg-slate-900 border border-slate-700 hover:border-brand-orange text-left transition-all cursor-pointer group">
+                <div class="text-xs text-brand-orange font-bold uppercase">Сертификат</div>
+                <div class="font-heading font-bold text-sm text-white mt-1 group-hover:text-brand-orange transition-colors">Llumar Official Partner</div>
+                <div class="text-[11px] text-slate-400 mt-2">Открыть документ →</div>
+              </button>
+
+              <button type="button" onclick="openCertModal('Сертификат Академии Krytex 9H+', 'Документ № KR-9082. Подтверждает прохождение аттестации по технологии многослойного нанесения защитных керамических составов Krytex 9H+ и гидрофобных покрытий для стекол.')"
+                      class="p-4 rounded-2xl bg-brand-dark hover:bg-slate-900 border border-slate-700 hover:border-brand-orange text-left transition-all cursor-pointer group">
+                <div class="text-xs text-brand-amber font-bold uppercase">Аттестация</div>
+                <div class="font-heading font-bold text-sm text-white mt-1 group-hover:text-brand-orange transition-colors">Академия Krytex 9H+</div>
+                <div class="text-[11px] text-slate-400 mt-2">Открыть документ →</div>
+              </button>
+
+              <button type="button" onclick="openCertModal('Свидетельство о регистрации ИП Смирнов А.В.', 'ОГРНИП 319784700192841 • ИНН 781439281745. Работаем официально с физическими и юридическими лицами (B2B автопарки и лизинговые компании) с предоставлением полного пакета закрывающих документов.')"
+                      class="p-4 rounded-2xl bg-brand-dark hover:bg-slate-900 border border-slate-700 hover:border-brand-orange text-left transition-all cursor-pointer group">
+                <div class="text-xs text-emerald-400 font-bold uppercase">Реквизиты</div>
+                <div class="font-heading font-bold text-sm text-white mt-1 group-hover:text-brand-orange transition-colors">ИП Смирнов А.В.</div>
+                <div class="text-[11px] text-slate-400 mt-2">Открыть документ →</div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 5: 6 REGULATED WORK STAGES ==================== -->
+  <section id="stages" class="py-16 lg:py-24 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="text-brand-orange font-heading font-bold text-xs uppercase tracking-wider">Технологический регламент</span>
+        <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-brand-textDark mt-2">
+          6 строго регламентированных этапов работы
+        </h2>
+        <p class="text-slate-600 mt-3 text-base">
+          Долговечность пленки на 70% зависит от правильной подготовки кузова. Мы соблюдаем полный технологический цикл без спешки и сокращения этапов.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Stage 1 -->
+        <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="font-heading font-extrabold text-2xl text-brand-orange">01</span>
+            <h3 class="font-heading font-bold text-lg text-brand-textDark">Приемка и осмотр ЛКП</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Замеряем толщину лакокрасочного покрытия толщиномером, фиксируем имеющиеся сколы и подписываем прозрачный заказ-наряд с точной сметой.
+          </p>
+        </div>
+
+        <!-- Stage 2 -->
+        <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="font-heading font-extrabold text-2xl text-brand-orange">02</span>
+            <h3 class="font-heading font-bold text-lg text-brand-textDark">Трехфазная детейлинг-мойка</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Бесконтактный состав, ручная мойка крупнопористой губкой, глубокая очистка кузова, дисков и арок от битума и металлических вкраплений.
+          </p>
+        </div>
+
+        <!-- Stage 3 -->
+        <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="font-heading font-extrabold text-2xl text-brand-orange">03</span>
+            <h3 class="font-heading font-bold text-lg text-brand-textDark">Восстановительная полировка</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Полировка кузова немецкими пастами <strong>Koch Chemie</strong> для удаления до 95% царапин, голограмм и «паутинки» перед нанесением защиты.
+          </p>
+        </div>
+
+        <!-- Stage 4 -->
+        <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="font-heading font-extrabold text-2xl text-brand-orange">04</span>
+            <h3 class="font-heading font-bold text-lg text-brand-textDark">Оклейка пленкой 200 мкм</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Раскрой и монтаж антигравийной пленки SunTek / Llumar с аккуратным подворотом краев и безопасной техникой резки без касания родного лака.
+          </p>
+        </div>
+
+        <!-- Stage 5 -->
+        <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="font-heading font-extrabold text-2xl text-brand-orange">05</span>
+            <h3 class="font-heading font-bold text-lg text-brand-textDark">Нанесение керамики 9H+</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Нанесение 2 слоев нанокерамического состава Krytex 9H+ на неоклеенные детали для зеркального блеска + обработка стекол составом «Антидождь».
+          </p>
+        </div>
+
+        <!-- Stage 6 -->
+        <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="font-heading font-extrabold text-2xl text-brand-orange">06</span>
+            <h3 class="font-heading font-bold text-lg text-brand-textDark">Сушка 12 ч и выдача авто</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Стабилизация пленки и керамики в беспылевом боксе при температуре +22°C в течение 12 часов и финальный контроль качества по чек-листу из 24 пунктов.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 6: PORTFOLIO & REVIEWS (DARK #111827) ==================== -->
+  <section id="portfolio" class="py-16 lg:py-24 bg-brand-dark bg-tech-grid text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <span class="text-brand-orange font-heading font-bold text-xs uppercase tracking-wider">Реальные кейсы из бокса на ул. Савушкина</span>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white mt-2">
+            Выполненные проекты «До / После»
+          </h2>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap gap-2" id="portfolioFilters">
+          <button type="button" data-filter="all" class="portfolio-filter-btn active px-4 py-2 rounded-xl bg-brand-orange text-white font-heading font-bold text-xs cursor-pointer">
+            Все работы
+          </button>
+          <button type="button" data-filter="crossover" class="portfolio-filter-btn px-4 py-2 rounded-xl bg-brand-card border border-slate-700 text-slate-300 hover:text-white font-heading font-semibold text-xs cursor-pointer">
+            Кроссоверы
+          </button>
+          <button type="button" data-filter="premium" class="portfolio-filter-btn px-4 py-2 rounded-xl bg-brand-card border border-slate-700 text-slate-300 hover:text-white font-heading font-semibold text-xs cursor-pointer">
+            Премиум
+          </button>
+          <button type="button" data-filter="full" class="portfolio-filter-btn px-4 py-2 rounded-xl bg-brand-card border border-slate-700 text-slate-300 hover:text-white font-heading font-semibold text-xs cursor-pointer">
+            Полная оклейка 360°
+          </button>
+        </div>
+      </div>
+
+      <!-- Portfolio Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="portfolioGrid">
+        <!-- Case 1 -->
+        <article data-category="crossover" class="portfolio-card bg-brand-card border border-slate-700/90 rounded-3xl overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="h-40 bg-gradient-to-br from-slate-800 via-slate-900 to-brand-dark p-5 flex flex-col justify-between relative border-b border-slate-800">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg bg-brand-orange/20 text-brand-orange text-[11px] font-bold">Кроссовер</span>
+                <span class="text-xs text-slate-400">Срок: 1,5 дня</span>
+              </div>
+              <div>
+                <h3 class="font-heading font-extrabold text-lg text-white">Geely Monjaro (2025)</h3>
+                <p class="text-xs text-slate-400">SunTek PPF 200 мкм + Krytex 9H+</p>
+              </div>
+            </div>
+            <div class="p-5 space-y-3">
+              <div class="text-xs font-semibold text-slate-300">Тариф «Оптимум» + Антидождь стекол</div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Оклеили весь передний ударный блок целиком (капот, бампер, 2 крыла, стойки, фары) с подворотом краев. На остальной кузов нанесли 2 слоя керамики.
+              </p>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-3 border-t border-slate-800 flex items-center justify-between">
+            <div>
+              <div class="text-[11px] text-slate-400">Итоговая цена:</div>
+              <div class="font-heading font-extrabold text-lg text-brand-orange">78 000 ₽</div>
+            </div>
+            <button type="button" onclick="openBookingModal('Хочу так же: Geely Monjaro (Тариф Оптимум)')"
+                    class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-brand-orange text-white text-xs font-heading font-bold transition-colors cursor-pointer">
+              Хочу так же
+            </button>
+          </div>
+        </article>
+
+        <!-- Case 2 -->
+        <article data-category="premium full" class="portfolio-card bg-brand-card border border-slate-700/90 rounded-3xl overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="h-40 bg-gradient-to-br from-slate-800 via-slate-900 to-brand-dark p-5 flex flex-col justify-between relative border-b border-slate-800">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg bg-brand-amber/20 text-brand-amber text-[11px] font-bold">Полная оклейка</span>
+                <span class="text-xs text-slate-400">Срок: 3 дня</span>
+              </div>
+              <div>
+                <h3 class="font-heading font-extrabold text-lg text-white">Li Auto L7 (2026)</h3>
+                <p class="text-xs text-slate-400">Матовый полиуретан SunTek Satin</p>
+              </div>
+            </div>
+            <div class="p-5 space-y-3">
+              <div class="text-xs font-semibold text-slate-300">Тариф «Максимум 360°» (Весь кузов)</div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Полная защита 100% кузова матовым полиуретаном с глубоким подворотом. Забронировали панорамную крышу, оптику и мультимедиа в салоне.
+              </p>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-3 border-t border-slate-800 flex items-center justify-between">
+            <div>
+              <div class="text-[11px] text-slate-400">Итоговая цена:</div>
+              <div class="font-heading font-extrabold text-lg text-brand-orange">172 000 ₽</div>
+            </div>
+            <button type="button" onclick="openBookingModal('Хочу так же: Li Auto L7 (Тариф Максимум 360°)')"
+                    class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-brand-orange text-white text-xs font-heading font-bold transition-colors cursor-pointer">
+              Хочу так же
+            </button>
+          </div>
+        </article>
+
+        <!-- Case 3 -->
+        <article data-category="crossover premium" class="portfolio-card bg-brand-card border border-slate-700/90 rounded-3xl overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="h-40 bg-gradient-to-br from-slate-800 via-slate-900 to-brand-dark p-5 flex flex-col justify-between relative border-b border-slate-800">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg bg-sky-500/20 text-sky-400 text-[11px] font-bold">Премиум</span>
+                <span class="text-xs text-slate-400">Срок: 1 день</span>
+              </div>
+              <div>
+                <h3 class="font-heading font-extrabold text-lg text-white">BMW X5 G05</h3>
+                <p class="text-xs text-slate-400">Полировка Koch Chemie + Llumar</p>
+              </div>
+            </div>
+            <div class="p-5 space-y-3">
+              <div class="text-xs font-semibold text-slate-300">Тариф «Стандарт» + Полировка</div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Убрали следы зимних моек восстановительной полировкой, оклеили ударную зону риска пленкой Llumar 200 мкм и покрыли кузов керамикой.
+              </p>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-3 border-t border-slate-800 flex items-center justify-between">
+            <div>
+              <div class="text-[11px] text-slate-400">Итоговая цена:</div>
+              <div class="font-heading font-extrabold text-lg text-brand-orange">59 000 ₽</div>
+            </div>
+            <button type="button" onclick="openBookingModal('Хочу так же: BMW X5 G05 (Тариф Стандарт)')"
+                    class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-brand-orange text-white text-xs font-heading font-bold transition-colors cursor-pointer">
+              Хочу так же
+            </button>
+          </div>
+        </article>
+
+        <!-- Case 4 -->
+        <article data-category="crossover" class="portfolio-card bg-brand-card border border-slate-700/90 rounded-3xl overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="h-40 bg-gradient-to-br from-slate-800 via-slate-900 to-brand-dark p-5 flex flex-col justify-between relative border-b border-slate-800">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg bg-brand-orange/20 text-brand-orange text-[11px] font-bold">Кроссовер</span>
+                <span class="text-xs text-slate-400">Срок: 1 день</span>
+              </div>
+              <div>
+                <h3 class="font-heading font-extrabold text-lg text-white">Chery Tiggo 8 Pro Max</h3>
+                <p class="text-xs text-slate-400">Новый авто сразу из автосалона</p>
+              </div>
+            </div>
+            <div class="p-5 space-y-3">
+              <div class="text-xs font-semibold text-slate-300">Тариф «Стандарт» (Зона риска)</div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Защитили капот, бампер, фары, стойки и зоны под ручками в день выдачи автомобиля от дилера. Подарили «Антидождь» на переднюю полусферу.
+              </p>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-3 border-t border-slate-800 flex items-center justify-between">
+            <div>
+              <div class="text-[11px] text-slate-400">Итоговая цена:</div>
+              <div class="font-heading font-extrabold text-lg text-brand-orange">52 000 ₽</div>
+            </div>
+            <button type="button" onclick="openBookingModal('Хочу так же: Chery Tiggo 8 Pro Max (Тариф Стандарт)')"
+                    class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-brand-orange text-white text-xs font-heading font-bold transition-colors cursor-pointer">
+              Хочу так же
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Verified Client Reviews Strip -->
+      <div class="mt-14 pt-12 border-t border-slate-800">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+          <div>
+            <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-white">Отзывы владельцев из Санкт-Петербурга</h3>
+            <p class="text-sm text-slate-400 mt-1">Подтвержденный рейтинг <span class="text-brand-amber font-bold">4,9 из 5,0</span> на Яндекс Картах и 2ГИС (более 310 оценок)</p>
+          </div>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-brand-card border border-slate-700 text-xs font-semibold text-slate-200">
+            <span class="text-brand-amber text-base">★★★★★</span> Проверенная организация
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-brand-card/90 border border-slate-700/80 rounded-3xl p-6 space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="font-heading font-bold text-sm text-white">Дмитрий Ковалев</div>
+              <span class="text-brand-amber text-xs">★★★★★</span>
+            </div>
+            <div class="text-xs text-slate-400">Авто: Geely Monjaro • Яндекс Карты</div>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              «Забрал машину из салона и сразу пригнал на Савушкина. Показали рулон SunTek, все края аккуратно подвернули, никаких стыков не видно. Каждые 3 часа присылали фото в Telegram. Рекомендую!»
+            </p>
+          </div>
+
+          <div class="bg-brand-card/90 border border-slate-700/80 rounded-3xl p-6 space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="font-heading font-bold text-sm text-white">Артем Воронов</div>
+              <span class="text-brand-amber text-xs">★★★★★</span>
+            </div>
+            <div class="text-xs text-slate-400">Авто: Li Auto L7 • 2ГИС</div>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              «Оклеили весь кузов в матовый полиуретан за 3 дня. Машина выглядит космически, после мойки на КАД ни одного скола за зиму. Через 2 недели бесплатно помыли и проверили все кромки».
+            </p>
+          </div>
+
+          <div class="bg-brand-card/90 border border-slate-700/80 rounded-3xl p-6 space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="font-heading font-bold text-sm text-white">Елена Морозова</div>
+              <span class="text-brand-amber text-xs">★★★★★</span>
+            </div>
+            <div class="text-xs text-slate-400">Авто: BMW X5 • Яндекс Карты</div>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              «Убрали всю паутинку после зимних моек и забронировали передок. Цена в договоре не изменилась ни на рубль, хотя у дилера за то же самое просили почти в полтора раза больше».
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 7: FAQ ACCORDION + LEAD FORM & MAP ==================== -->
+  <section id="faq" class="py-16 lg:py-24 bg-brand-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="text-brand-orange font-heading font-bold text-xs uppercase tracking-wider">Честные ответы экспертов</span>
+        <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-brand-textDark mt-2">
+          Частые вопросы перед оклейкой
+        </h2>
+      </div>
+
+      <div class="space-y-3.5" id="faqContainer">
+        <!-- FAQ 1 -->
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-base text-brand-textDark hover:text-brand-orange transition-colors cursor-pointer">
+            <span>У официального дилера предлагают сделать дешевле при покупке авто — в чем разница?</span>
+            <span class="faq-icon text-brand-orange text-xl font-bold transition-transform">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            В автосалонах для удешевления часто используют гибридную или ПВХ-пленку толщиной 100–150 мкм и клеят её «встык» без подворота за край детали. Такая пленка желтеет через 1–1,5 года и отслаивается на мойках высокого давления. Мы работаем только оригинальным 100% полиуретаном SunTek / Llumar (200 мкм) с полным подворотом краев и официальной гарантией 5 лет.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-base text-brand-textDark hover:text-brand-orange transition-colors cursor-pointer">
+            <span>Не порежут ли родной лак ножом при раскрое пленки на кузове?</span>
+            <span class="faq-icon text-brand-orange text-xl font-bold transition-transform">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Исключено. Для сложных элементов используются плоттерные лекала под конкретную модель авто, а при подрезке припусков на подворот мастера применяют технику надрезания только верхнего полимерного слоя (менее 30% толщины пленки) с последующим разрывом по линии — лезвие физически не касается лакокрасочного покрытия.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-base text-brand-textDark hover:text-brand-orange transition-colors cursor-pointer">
+            <span>Не проще ли потом просто перекрасить бампер или капот от сколов?</span>
+            <span class="faq-icon text-brand-orange text-xl font-bold transition-transform">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Качественная перекраска капота, бампера и двух крыльев в Санкт-Петербурге сегодня стоит сопоставимо с оклейкой «Зоны риска», но при продаже автомобиля проверка толщиномером покажет вторичный окрас — покупатели автоматически требуют скидку 10–15% от рыночной цены. Заводская краска под полиуретаном сохраняет статус «не бит, не крашен».
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-base text-brand-textDark hover:text-brand-orange transition-colors cursor-pointer">
+            <span>Как добраться домой или в офис, если нужно оставить машину на 1–2 дня?</span>
+            <span class="faq-icon text-brand-orange text-xl font-bold transition-transform">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Наш бокс находится в 7 минутах пешком от метро «Беговая» и рядом с выездом на ЗСД. Кроме того, при заказе пакетов «Оптимум» и «Максимум 360°» мы вызываем для вас такси комфорт-класса до дома или офиса за счет студии.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FINAL LEAD CAPTURE, CONTACTS & MAP ==================== -->
+  <section id="contacts" class="py-16 lg:py-24 bg-brand-dark text-white border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+
+        <!-- Left 6 Cols: Lead Form with Promo -->
+        <div class="lg:col-span-6 bg-brand-card border border-slate-700 rounded-3xl p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-amber/20 text-brand-amber font-heading font-bold text-xs uppercase mb-4">
+              Акция «Первое знакомство»
+            </div>
+            <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white leading-tight">
+              Узнайте точную цену для вашего авто за 1 минуту
+            </h2>
+            <p class="text-sm text-slate-300 mt-2.5 leading-relaxed">
+              Оставьте заявку до конца месяца и закрепите подарок: <strong class="text-brand-amber">обработку всех стекол составом «Антидождь» (5 500 ₽) и защиту дисков</strong> при заказе оклейки.
+            </p>
+
+            <form id="footerLeadForm" class="mt-6 space-y-4">
+              <div>
+                <label for="carModelInput" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                  Марка, модель и год автомобиля
+                </label>
+                <input type="text" id="carModelInput" required placeholder="Например: Geely Monjaro 2025"
+                       class="w-full px-4 py-3.5 rounded-2xl bg-brand-dark border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-orange text-sm" />
+              </div>
+
+              <div>
+                <label for="phoneInput" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                  Ваш телефон
+                </label>
+                <input type="tel" id="phoneInput" required placeholder="+7 (___) ___-__-__"
+                       class="w-full px-4 py-3.5 rounded-2xl bg-brand-dark border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-orange text-sm phone-mask" />
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                  Куда удобнее отправить расчет?
+                </label>
+                <div class="grid grid-cols-3 gap-2.5">
+                  <label class="cursor-pointer">
+                    <input type="radio" name="contactMethod" value="Telegram" checked class="peer sr-only" />
+                    <div class="py-2.5 px-3 rounded-xl bg-brand-dark border border-slate-700 peer-checked:border-brand-orange peer-checked:bg-brand-orange/15 text-center text-xs font-semibold text-slate-300 peer-checked:text-white transition-all">
+                      Telegram
+                    </div>
+                  </label>
+                  <label class="cursor-pointer">
+                    <input type="radio" name="contactMethod" value="MAX / WhatsApp" class="peer sr-only" />
+                    <div class="py-2.5 px-3 rounded-xl bg-brand-dark border border-slate-700 peer-checked:border-brand-orange peer-checked:bg-brand-orange/15 text-center text-xs font-semibold text-slate-300 peer-checked:text-white transition-all">
+                      MAX / WA
+                    </div>
+                  </label>
+                  <label class="cursor-pointer">
+                    <input type="radio" name="contactMethod" value="Звонок мастера" class="peer sr-only" />
+                    <div class="py-2.5 px-3 rounded-xl bg-brand-dark border border-slate-700 peer-checked:border-brand-orange peer-checked:bg-brand-orange/15 text-center text-xs font-semibold text-slate-300 peer-checked:text-white transition-all">
+                      Звонок
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Mandatory FZ-152 Consent -->
+              <label class="flex items-start gap-2.5 pt-1 cursor-pointer select-none">
+                <input type="checkbox" required checked class="mt-0.5 w-4 h-4 accent-brand-orange rounded" />
+                <span class="text-xs text-slate-400 leading-snug">
+                  Согласен с <button type="button" onclick="openPrivacyModal()" class="underline text-slate-300 hover:text-brand-orange">Политикой обработки персональных данных</button> в соответствии с ФЗ № 152-ФЗ.
+                </span>
+              </label>
+
+              <button type="submit"
+                      class="w-full py-4 rounded-2xl bg-brand-orange hover:bg-brand-orangeHover text-white font-heading font-bold text-base shadow-xl shadow-brand-orange/25 transition-all cursor-pointer">
+                Получить расчет и закрепить подарок
+              </button>
+            </form>
+
+            <!-- Instant Success Banner -->
+            <div id="footerFormSuccess" class="hidden mt-5 p-4 rounded-2xl bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 text-sm">
+              <div class="font-heading font-bold text-white">Заявка принята! Бонус 5 500 ₽ закреплен за вашим номером.</div>
+              <p class="text-xs mt-1">Мастер студии «БлескПро» свяжется с вами в течение 10 минут и отправит точную смету.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 6 Cols: Studio Contacts & Custom Map Visualization -->
+        <div class="lg:col-span-6 bg-brand-card border border-slate-700 rounded-3xl p-6 sm:p-8 lg:p-10 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <h3 class="font-heading font-extrabold text-2xl text-white">Контакты студии «БлескПро»</h3>
+            <div class="space-y-3 text-sm">
+              <div>
+                <div class="text-xs text-slate-400 uppercase font-semibold">Адрес бокса в Санкт-Петербурге:</div>
+                <div class="text-white font-medium mt-0.5">г. Санкт-Петербург, Приморский район, ул. Савушкина, д. 119, корп. 3, бокс № 4</div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                <div>
+                  <div class="text-xs text-slate-400 uppercase font-semibold">Телефон:</div>
+                  <a href="tel:+78124093872" class="text-lg font-heading font-bold text-brand-orange hover:underline mt-0.5 block">
+                    +7 (812) 409-38-72
+                  </a>
+                </div>
+                <div>
+                  <div class="text-xs text-slate-400 uppercase font-semibold">E-mail:</div>
+                  <a href="mailto:info@bleskpro-spb.ru" class="text-white font-medium hover:text-brand-orange mt-0.5 block">
+                    info@bleskpro-spb.ru
+                  </a>
+                </div>
+              </div>
+
+              <div class="pt-1">
+                <div class="text-xs text-slate-400 uppercase font-semibold mb-2">Соцсети и мессенджеры:</div>
+                <div class="flex flex-wrap gap-2.5">
+                  <a href="https://vk.com/bleskpro_spb" target="_blank" rel="noopener noreferrer"
+                     class="px-4 py-2 rounded-xl bg-brand-dark border border-slate-700 hover:border-brand-orange text-xs font-semibold text-white transition-colors">
+                    ВКонтакте (vk.com/bleskpro_spb)
+                  </a>
+                  <a href="https://t.me/bleskpro_spb" target="_blank" rel="noopener noreferrer"
+                     class="px-4 py-2 rounded-xl bg-brand-dark border border-slate-700 hover:border-sky-400 text-xs font-semibold text-white transition-colors">
+                    Telegram (@bleskpro_spb)
+                  </a>
+                  <a href="#contacts" onclick="openBookingModal('Связь через мессенджер MAX')"
+                     class="px-4 py-2 rounded-xl bg-brand-dark border border-slate-700 hover:border-brand-amber text-xs font-semibold text-white transition-colors">
+                    Мессенджер MAX
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Vector Map Widget -->
+          <div class="relative rounded-2xl overflow-hidden border border-slate-700 bg-[#172033] h-56 flex flex-col justify-between p-4">
+            <svg class="absolute inset-0 w-full h-full opacity-45" viewBox="0 0 600 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Neva / Gulf Water Area -->
+              <path d="M0 190 Q240 165 600 205 L600 260 L0 260 Z" fill="#0F172A"/>
+              <!-- Roads (Savushkina, Primorskiy, ZSD) -->
+              <path d="M0 115 L600 105" stroke="#475569" stroke-width="10"/>
+              <path d="M0 148 L600 142" stroke="#334155" stroke-width="6"/>
+              <path d="M210 0 L245 260" stroke="#64748B" stroke-width="12"/>
+              <path d="M410 0 L395 260" stroke="#334155" stroke-width="6"/>
+              <text x="25" y="102" fill="#94A3B8" font-size="11" font-family="Inter">ул. Савушкина</text>
+              <text x="255" y="32" fill="#94A3B8" font-size="11" font-family="Inter">ЗСД (Западный скоростной диаметр)</text>
+              <text x="430" y="92" fill="#94A3B8" font-size="11" font-family="Inter">м. Беговая</text>
+            </svg>
+
+            <div class="relative z-10 flex items-center justify-between">
+              <span class="px-3 py-1 rounded-lg bg-brand-dark/90 border border-slate-700 text-[11px] font-semibold text-slate-200">
+                Приморский район • 7 мин от м. Беговая
+              </span>
+              <a href="https://yandex.ru/maps/?text=Санкт-Петербург,+улица+Савушкина,+119к3" target="_blank" rel="noopener noreferrer"
+                 class="px-3 py-1 rounded-lg bg-brand-orange text-white text-[11px] font-bold hover:bg-brand-orangeHover transition-colors">
+                Открыть в Яндекс Картах ↗
+              </a>
+            </div>
+
+            <!-- Studio Pin -->
+            <div class="relative z-10 my-auto mx-auto flex flex-col items-center">
+              <div class="px-4 py-2 rounded-2xl bg-brand-dark border-2 border-brand-orange shadow-xl flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-orange animate-ping"></span>
+                <span class="font-heading font-bold text-xs text-white">Студия «БлескПро» • Бокс № 4</span>
+              </div>
+              <div class="w-0.5 h-4 bg-brand-orange"></div>
+            </div>
+
+            <div class="relative z-10 text-[11px] text-slate-400 text-right">
+              Бесплатная охраняемая парковка для клиентов
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal Footer -->
+      <footer class="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div>
+          © 2026 Студия автодетейлинга «БлескПро» (ИП Смирнов А.В., ОГРНИП 319784700192841). Все права защищены.
+        </div>
+        <div class="flex items-center gap-5">
+          <button type="button" onclick="openPrivacyModal()" class="hover:text-white underline cursor-pointer">
+            Политика конфиденциальности (ФЗ-152)
+          </button>
+          <span>Не является публичной офертой (ст. 437 ГК РФ)</span>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ==================== BOOKING MODAL ==================== -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/75 backdrop-blur-sm p-4">
+    <div class="bg-brand-card border border-slate-700 rounded-3xl max-w-md w-full p-6 sm:p-8 text-white relative shadow-2xl">
+      <button type="button" onclick="closeBookingModal()" aria-label="Закрыть окно"
+              class="absolute top-5 right-5 w-9 h-9 rounded-xl bg-brand-dark text-slate-400 hover:text-white flex items-center justify-center cursor-pointer">
+        ✕
+      </button>
+
+      <span class="inline-block px-3 py-1 rounded-full bg-brand-orange/20 text-brand-orange font-heading font-bold text-xs uppercase">
+        Фиксация цены и бонуса
+      </span>
+      <h3 class="font-heading font-extrabold text-xl sm:text-2xl mt-3">Рассчитать точную стоимость</h3>
+      <p id="modalSelectedContext" class="text-xs text-brand-amber font-medium mt-1.5">
+        Выбрано: Тариф «Стандарт» + бонус «Антидождь» (5 500 ₽)
+      </p>
+
+      <form id="modalLeadForm" class="mt-5 space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Марка и модель авто</label>
+          <input type="text" id="modalCarInput" required placeholder="Например: BMW X5 G05"
+                 class="w-full px-4 py-3 rounded-2xl bg-brand-dark border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-orange" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Телефон для расчета</label>
+          <input type="tel" id="modalPhoneInput" required placeholder="+7 (___) ___-__-__"
+                 class="w-full px-4 py-3 rounded-2xl bg-brand-dark border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-orange phone-mask" />
+        </div>
+        <label class="flex items-start gap-2.5 cursor-pointer select-none">
+          <input type="checkbox" required checked class="mt-0.5 w-4 h-4 accent-brand-orange rounded" />
+          <span class="text-[11px] text-slate-400">
+            Согласен на обработку персональных данных в соответствии с Политикой конфиденциальности (ФЗ № 152).
+          </span>
+        </label>
+        <button type="submit"
+                class="w-full py-3.5 rounded-2xl bg-brand-orange hover:bg-brand-orangeHover text-white font-heading font-bold text-sm shadow-lg shadow-brand-orange/25 transition-all cursor-pointer">
+          Получить расчет в мессенджер
+        </button>
+      </form>
+
+      <div id="modalFormSuccess" class="hidden mt-4 p-4 rounded-2xl bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 text-xs leading-relaxed">
+        <strong class="text-white block text-sm mb-1">Спасибо! Заявка отправлена мастеру.</strong>
+        Мы подготовим расчет под ваш автомобиль, закрепим бонус «Антидождь» (5 500 ₽) и свяжемся с вами в ближайшие 10 минут.
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CERTIFICATE / PRIVACY INFO MODAL ==================== -->
+  <div id="infoModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/75 backdrop-blur-sm p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 text-brand-textDark relative shadow-2xl">
+      <button type="button" onclick="closeInfoModal()" aria-label="Закрыть документ"
+              class="absolute top-5 right-5 w-9 h-9 rounded-xl bg-slate-100 text-slate-500 hover:text-brand-textDark flex items-center justify-center cursor-pointer">
+        ✕
+      </button>
+      <div class="text-xs font-heading font-bold uppercase text-brand-orange">Официальный документ студии «БлескПро»</div>
+      <h3 id="infoModalTitle" class="font-heading font-extrabold text-xl mt-2">Заголовок документа</h3>
+      <p id="infoModalBody" class="text-sm text-slate-600 leading-relaxed mt-4"></p>
+      <button type="button" onclick="closeInfoModal()"
+              class="mt-6 w-full py-3 rounded-2xl bg-brand-dark text-white font-heading font-bold text-sm cursor-pointer">
+        Закрыть
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT INTERACTIVITY ==================== -->
+  <script>
+    // 1. Mobile Navigation Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // 2. Interactive Cost Calculator & Car Protection Zone Visualizer
+    let selectedClassMult = 1;
+    let selectedClassName = 'Седан / Хэтчбек';
+    let selectedPkg = 'standard';
+    let selectedPkgBase = 49000;
+    let selectedPkgDays = '1 день';
+    let selectedPkgTitle = 'Тариф «Стандарт»';
+
+    const classBtns = document.querySelectorAll('.calc-class-btn');
+    const pkgBtns = document.querySelectorAll('.calc-pkg-btn');
+    const optPolish = document.getElementById('optPolish');
+    const optInterior = document.getElementById('optInterior');
+
+    function updateVisualizerAndPrice() {
+      // Calculate total
+      const extras = (optPolish.checked ? Number(optPolish.value) : 0) + (optInterior.checked ? Number(optInterior.value) : 0);
+      const rawTotal = Math.round((selectedPkgBase * selectedClassMult + extras) / 1000) * 1000;
+
+      document.getElementById('calcPriceOutput').textContent = rawTotal.toLocaleString('ru-RU') + ' ₽';
+      document.getElementById('calcDaysOutput').textContent = selectedPkgDays;
+      document.getElementById('calcPkgLabel').textContent = selectedPkgTitle;
+
+      // Update SVG Car Zones
+      const zBumper = document.getElementById('zoneBumperFront');
+      const zLights = document.getElementById('zoneLights');
+      const zHood = document.getElementById('zoneHood');
+      const zFenders = document.getElementById('zoneFendersFront');
+      const zMirrors = document.getElementById('zoneMirrors');
+      const zRoofStrip = document.getElementById('zoneRoofStrip');
+      const zRoof = document.getElementById('zoneRoof');
+      const zDoors = document.getElementById('zoneDoors');
+      const zRear = document.getElementById('zoneRear');
+      const zText = document.getElementById('calcZonesText');
+
+      const setZone = (el, state) => {
+        el.classList.remove('car-zone-active', 'car-zone-ceramic', 'car-zone-inactive');
+        el.classList.add(state);
+      };
+
+      if (selectedPkg === 'standard') {
+        setZone(zBumper, 'car-zone-active');
+        setZone(zLights, 'car-zone-active');
+        setZone(zHood, 'car-zone-active');
+        setZone(zMirrors, 'car-zone-active');
+        setZone(zRoofStrip, 'car-zone-active');
+        setZone(zFenders, 'car-zone-ceramic');
+        setZone(zRoof, 'car-zone-ceramic');
+        setZone(zDoors, 'car-zone-ceramic');
+        setZone(zRear, 'car-zone-ceramic');
+        zText.textContent = 'Оклейка: передний бампер, капот, фары, зеркала, полоса на крышу, зоны под ручками + керамика Krytex 9H+ на весь кузов.';
+      } else if (selectedPkg === 'optimum') {
+        setZone(zBumper, 'car-zone-active');
+        setZone(zLights, 'car-zone-active');
+        setZone(zHood, 'car-zone-active');
+        setZone(zFenders, 'car-zone-active');
+        setZone(zMirrors, 'car-zone-active');
+        setZone(zRoofStrip, 'car-zone-active');
+        setZone(zRoof, 'car-zone-ceramic');
+        setZone(zDoors, 'car-zone-ceramic');
+        setZone(zRear, 'car-zone-ceramic');
+        zText.textContent = 'Оклейка: капот и бампер целиком, оба передних крыла полностью, стойки, фары, зеркала + 2 слоя керамики на остальной кузов.';
+      } else {
+        [zBumper, zLights, zHood, zFenders, zMirrors, zRoofStrip, zRoof, zDoors, zRear].forEach(el => setZone(el, 'car-zone-active'));
+        zText.textContent = 'Полная броня 360°: 100% окрашенных элементов кузова оклеены антигравийным полиуретаном 200 мкм с подворотом краев.';
+      }
+    }
+
+    classBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        classBtns.forEach(b => {
+          b.classList.remove('border-brand-orange', 'bg-brand-orange/5');
+          b.classList.add('border-slate-200', 'bg-white');
+        });
+        btn.classList.remove('border-slate-200', 'bg-white');
+        btn.classList.add('border-brand-orange', 'bg-brand-orange/5');
+        selectedClassMult = Number(btn.dataset.mult);
+        selectedClassName = btn.querySelector('div').textContent;
+        updateVisualizerAndPrice();
+      });
+    });
+
+    pkgBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        pkgBtns.forEach(b => {
+          b.classList.remove('border-brand-orange', 'bg-brand-orange/5');
+          b.classList.add('border-slate-200', 'bg-white');
+        });
+        btn.classList.remove('border-slate-200', 'bg-white');
+        btn.classList.add('border-brand-orange', 'bg-brand-orange/5');
+        selectedPkg = btn.dataset.pkg;
+        selectedPkgBase = Number(btn.dataset.base);
+        selectedPkgDays = btn.dataset.days;
+        selectedPkgTitle = 'Тариф «' + btn.querySelector('span, div').textContent + '»';
+        updateVisualizerAndPrice();
+      });
+    });
+
+    optPolish.addEventListener('change', updateVisualizerAndPrice);
+    optInterior.addEventListener('change', updateVisualizerAndPrice);
+
+    function submitCalculatedConfig() {
+      const price = document.getElementById('calcPriceOutput').textContent;
+      openBookingModal(`${selectedPkgTitle} (${selectedClassName}) — расчет ${price}`);
+    }
+
+    // 3. Portfolio Filter Tabs
+    const filterBtns = document.querySelectorAll('.portfolio-filter-btn');
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-brand-orange', 'text-white', 'font-bold');
+          b.classList.add('bg-brand-card', 'text-slate-300', 'border', 'border-slate-700');
+        });
+        btn.classList.remove('bg-brand-card', 'text-slate-300', 'border', 'border-slate-700');
+        btn.classList.add('bg-brand-orange', 'text-white', 'font-bold');
+
+        const filter = btn.dataset.filter;
+        portfolioCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category.includes(filter)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // 4. FAQ Accordion
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('.faq-icon');
+        const isOpen = !content.classList.contains('hidden');
+
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '+');
+
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          icon.textContent = '−';
+        }
+      });
+    });
+
+    // 5. Booking Modal & Info Modal Handlers
+    const bookingModal = document.getElementById('bookingModal');
+    const modalSelectedContext = document.getElementById('modalSelectedContext');
+    const modalLeadForm = document.getElementById('modalLeadForm');
+    const modalFormSuccess = document.getElementById('modalFormSuccess');
+
+    function openBookingModal(contextText) {
+      modalSelectedContext.textContent = 'Выбрано: ' + contextText;
+      modalLeadForm.classList.remove('hidden');
+      modalFormSuccess.classList.add('hidden');
+      bookingModal.classList.remove('hidden');
+      bookingModal.classList.add('flex');
+    }
+
+    function closeBookingModal() {
+      bookingModal.classList.add('hidden');
+      bookingModal.classList.remove('flex');
+    }
+
+    modalLeadForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      modalLeadForm.classList.add('hidden');
+      modalFormSuccess.classList.remove('hidden');
+    });
+
+    const footerLeadForm = document.getElementById('footerLeadForm');
+    const footerFormSuccess = document.getElementById('footerFormSuccess');
+    footerLeadForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      footerLeadForm.classList.add('hidden');
+      footerFormSuccess.classList.remove('hidden');
+    });
+
+    // Certificates & Privacy Info Modal
+    const infoModal = document.getElementById('infoModal');
+    function openCertModal(title, body) {
+      document.getElementById('infoModalTitle').textContent = title;
+      document.getElementById('infoModalBody').textContent = body;
+      infoModal.classList.remove('hidden');
+      infoModal.classList.add('flex');
+    }
+
+    function openPrivacyModal() {
+      openCertModal(
+        'Политика обработки персональных данных (ФЗ № 152-ФЗ)',
+        'Оператор персональных данных: ИП Смирнов Алексей Викторович (Студия автодетейлинга «БлескПро», г. Санкт-Петербург, ул. Савушкина, д. 119, корп. 3). Оставляя номер телефона и марку автомобиля на сайте, пользователь дает согласие на обработку указанных данных исключительно для связи с менеджером, расчета стоимости услуг и записи на обслуживание. Данные не передаются третьим лицам и защищены в соответствии с требованиями Федерального закона № 152-ФЗ.'
+      );
+    }
+
+    function closeInfoModal() {
+      infoModal.classList.add('hidden');
+      infoModal.classList.remove('flex');
+    }
+
+    // Close modals on backdrop click
+    [bookingModal, infoModal].forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+      });
+    });
+
+    // Simple Russian Phone Input Formatter
+    document.querySelectorAll('.phone-mask').forEach(input => {
+      input.addEventListener('input', (e) => {
+        let digits = e.target.value.replace(/\D/g, '');
+        if (!digits) {
+          e.target.value = '';
+          return;
+        }
+        if (digits[0] === '8' || digits[0] === '7') {
+          digits = '7' + digits.slice(1);
+        } else {
+          digits = '7' + digits;
+        }
+        digits = digits.slice(0, 11);
+        let formatted = '+7';
+        if (digits.length > 1) formatted += ' (' + digits.slice(1, 4);
+        if (digits.length >= 4) formatted += ') ' + digits.slice(4, 7);
+        if (digits.length >= 7) formatted += '-' + digits.slice(7, 9);
+        if (digits.length >= 9) formatted += '-' + digits.slice(9, 11);
+        e.target.value = formatted;
+      });
+    });
+  </script>
+</body>
+</html>
